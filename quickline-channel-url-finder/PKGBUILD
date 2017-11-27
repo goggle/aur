@@ -1,0 +1,23 @@
+# Maintainer: Alexander Seiler <seileralex@gmail.com>
+pkgname=quickline-channel-url-finder
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A tool to easily get the URL of a TV channel from Quickline Mobil-TV."
+arch=('any')
+url="https://github.com/goggle/quickline-channel-url-finder"
+license=('GPL')
+depends=('python' 'python-fuzzywuzzy')
+makedepends=('python-setuptools')
+optdepends=('python-levenshtein: provides a 4-10x speedup in string matching')
+source=(https://github.com/goggle/$pkgname/archive/v$pkgver.tar.gz)
+md5sums=('ca07385ef770064e336857d19c897229')
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    python setup.py build
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    python setup.py install --root="${pkgdir}/" --optimize=1
+}
