@@ -11,9 +11,6 @@ PROJECT_LINKS = {
     'python-tableone': 'https://github.com/tompollard/tableone',
 }
 
-# Names of directories to exclude
-EXCLUDE_DIRS = ['.git', 'scripts']
-
 
 def main():
     parser = argparse.ArgumentParser(
@@ -34,7 +31,8 @@ def main():
 
 def get_dir_names():
     return sorted([d for d in os.listdir('..') if os.path.isdir(
-        os.path.join('..', d)) and d not in EXCLUDE_DIRS])
+        os.path.join('..', d)) and '.SRCINFO' in os.listdir(
+            os.path.join('..', d))])
 
 
 def parse_package_info(pkgname):
