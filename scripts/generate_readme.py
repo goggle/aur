@@ -4,6 +4,8 @@ import os
 import re
 import sys
 
+AUR_USER = 'aexl'
+
 # Prefer to show links to the development repository instead
 # to e.g. PyPI
 PROJECT_LINKS = {
@@ -53,7 +55,7 @@ def parse_package_info(pkgname):
 def generate_readme():
     title = '# AUR (Arch User Repository) Packages'
     description = ('My [aur](https://aur.archlinux.org/packages/'
-                   '?K=aexl&SeB=m) packages.')
+                   '?K=%s&SeB=m) packages.' % AUR_USER)
     packages = [parse_package_info(name) for name in get_dir_names()]
 
     sio = io.StringIO('')
