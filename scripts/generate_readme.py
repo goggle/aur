@@ -60,7 +60,7 @@ def generate_readme():
     sio.writelines([title, '\n\n', description, '\n\n## Packages\n\n'])
 
     sio.writelines(
-        '| Name | Description | License | Project link | AUR link | Version |')
+        '| Name | Description | License | Project page | AUR page | Version |')
     sio.writelines('\n')
     sio.writelines('|---|---|---|:---:|:---:|---:|')
     sio.writelines('\n')

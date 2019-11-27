@@ -4,7 +4,7 @@ My [aur](https://aur.archlinux.org/packages/?K=aexl&SeB=m) packages.
 
 ## Packages
 
-| Name | Description | License | Project link | AUR link | Version |
+| Name | Description | License | Project page | AUR page | Version |
 |---|---|---|:---:|:---:|---:|
 | **kodi-addon-checker** | Check kodi addons or whole kodi repositories for errors and best practices. | GPL3 | [:heavy_check_mark:](https://github.com/xbmc/addon-check) | [:heavy_check_mark:](https://aur.archlinux.org/packages/kodi-addon-checker/) | 0.0.15 |
 | **python-cursor** | Python package to hide or show the terminal cursor | GPL3 | [:heavy_check_mark:](https://github.com/GijsTimmers/cursor) | [:heavy_check_mark:](https://aur.archlinux.org/packages/python-cursor/) | 1.3.4 |
