@@ -64,20 +64,19 @@ def generate_readme():
     sio.writelines([title, '\n\n', description, '\n\n## Packages\n\n'])
 
     sio.writelines(
-        '| Name | Description | License | Project page | AUR page | Version |')
+        '| Name | Description | License | Project page | AUR page |')
     sio.writelines('\n')
-    sio.writelines('|---|---|---|:---:|:---:|---:|')
+    sio.writelines('|---|---|---|:---:|:---:|')
     sio.writelines('\n')
 
     pline_template = ('| **%s** | %s | %s | [:heavy_check_mark:](%s) '
-                      '| [:heavy_check_mark:](%s) | %s |')
+                      '| [:heavy_check_mark:](%s) |')
     for p in packages:
         url = PROJECT_LINKS.get(p['name'])
         url = url if url else p['url']
         line = pline_template % (
                 p['name'], p['pkgdesc'], p['license'],
-                url, 'https://aur.archlinux.org/packages/%s/' % p['name'],
-                p['pkgver'])
+                url, 'https://aur.archlinux.org/packages/%s/' % p['name'])
         sio.writelines(line)
         sio.writelines('\n')
 
