@@ -1,4 +1,6 @@
-on: [push]
+on:
+    schedule:
+        - cron: '0 8 * * *'
 name: Check for new upstream releases
 jobs:
     test:
