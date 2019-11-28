@@ -1,7 +1,8 @@
+name: New upstream releases
 on:
+    push:
     schedule:
-        - cron: '0 8 * * *'
-name: Check for new upstream releases
+        - cron: '0 6 * * *'
 jobs:
     test:
         runs-on: ubuntu-latest
