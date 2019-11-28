@@ -1,0 +1,16 @@
+on: [push]
+name: Check for new upstream releases
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                go: [1.13]
+        container: golang:${{ matrix.go }}-stretch
+        steps:
+        - name: Install aur-out-of-date
+          run: go get github.com/simon04/aur-out-of-date
+        - name: Check for new upstream releases
+          run: aur-out-of-date -user aexl
+          env:
+              GITHUB_TOKEN: ${{ secrets.gh_token }}
