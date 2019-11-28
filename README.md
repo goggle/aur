@@ -1,5 +1,7 @@
 # AUR (Arch User Repository) Packages
 
+![](https://github.com/goggle/aur/workflows/New%20upstream%20releases/badge.svg)
+
 My [aur](https://aur.archlinux.org/packages/?K=aexl&SeB=m) packages.
 
 ## Packages

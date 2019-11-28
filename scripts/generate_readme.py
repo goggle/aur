@@ -56,12 +56,18 @@ def parse_package_info(pkgname):
 
 def generate_readme():
     title = '# AUR (Arch User Repository) Packages'
+    badges = [('![](https://github.com/goggle/aur/workflows/'
+               'New%20upstream%20releases/badge.svg)')]
     description = ('My [aur](https://aur.archlinux.org/packages/'
                    '?K=%s&SeB=m) packages.' % AUR_USER)
     packages = [parse_package_info(name) for name in get_dir_names()]
 
     sio = io.StringIO('')
-    sio.writelines([title, '\n\n', description, '\n\n## Packages\n\n'])
+    sio.writelines([title, '\n\n'])
+    for badge in badges:
+        sio.writelines(badge)
+        sio.writelines('\n')
+    sio.writelines(['\n', description, '\n\n## Packages\n\n'])
 
     sio.writelines(
         '| Name | Description | License | Project page | AUR page |')
