@@ -12,6 +12,7 @@ AUR_USER = 'aexl'
 # to e.g. PyPI
 PROJECT_LINKS = {
     'kodi-addon-checker': 'https://github.com/xbmc/addon-check',
+    'python-kodistubs': 'https://github.com/romanvm/Kodistubs',
     'python-tableone': 'https://github.com/tompollard/tableone',
 }
 
