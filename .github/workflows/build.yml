@@ -1,0 +1,13 @@
+name: Build and check PKGBUILDs
+
+on: [push]
+
+jobs:
+  python-tableone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and check python-tableone
+        uses: edlanglois/pkgbuild-action@v1
+        with:
+          pkgdir: "python-tableone"
