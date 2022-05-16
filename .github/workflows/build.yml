@@ -11,3 +11,11 @@ jobs:
         uses: edlanglois/pkgbuild-action@v1
         with:
           pkgdir: "python-tableone"
+  python-kodistubs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and check python-kodistubs
+        uses: edlanglois/pkgbuild-action@v1
+        with:
+          pkgdir: "python-kodistubs"
