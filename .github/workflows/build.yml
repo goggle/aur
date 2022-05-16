@@ -36,3 +36,11 @@ jobs:
         with:
           pkgdir: "kodi-addon-checker"
           aurDeps: 1
+  sioyek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and check sioyek
+        uses: edlanglois/pkgbuild-action@v1
+        with:
+          pkgdir: "sioyek"
