@@ -6,7 +6,7 @@ jobs:
   python-tableone:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build and check python-tableone
         uses: edlanglois/pkgbuild-action@v1
         with:
@@ -14,7 +14,7 @@ jobs:
   python-kodistubs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build and check python-kodistubs
         uses: edlanglois/pkgbuild-action@v1
         with:
@@ -22,7 +22,7 @@ jobs:
   python-cursor:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build and check python-cursor
         uses: edlanglois/pkgbuild-action@v1
         with:
@@ -30,7 +30,7 @@ jobs:
   kodi-addon-checker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build and check kodi-addon-checker
         uses: edlanglois/pkgbuild-action@v1
         with:
@@ -39,7 +39,7 @@ jobs:
   sioyek:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build and check sioyek
         uses: edlanglois/pkgbuild-action@v1
         with:
