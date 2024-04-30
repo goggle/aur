@@ -2,7 +2,7 @@
 
 pkgname=kodi-addon-checker
 pkgver=0.0.31
-pkgrel=2
+pkgrel=3
 pkgdesc="Check kodi addons or whole kodi repositories for errors and best practices."
 arch=('any')
 url="https://pypi.org/project/${pkgname}"
